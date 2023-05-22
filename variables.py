@@ -19,5 +19,5 @@ b='1'
 print(type(a))
 print(type(b))
 
-c=2.1
+c=2.14353
 print(type(c))
