@@ -158,41 +158,43 @@
 #     print('요청하신 문자는 %d 번째에 있습니다.' % result)
 
 # 대소문자 변경 : upper() / lower()
-a='heLLo'
-print(a.upper())
-print(a.lower())
-
-# 문자열 양쪽 공백을 없애는 함수 : strip()
-a='        hello world   '
-print(a.strip())
-
-# 문자열 대체 : replace()
-# 특정 문자열을 특정 문자로 대체
-a='I studied python'
-b=a.replace('python','java')
-print(b)
+# 
 
 # 문자열 나누기 : split()
 # 공백을 기준으로 자르는 함수
 # 원하는 문자열을 기준으로 자를수 있음 
-a='I studied python'
-b=a.split()
-print(b)
+# a='I studied python'
+# b=a.split()
+# print(b)
 
-a= 'I      studied     python'
-b=a.split(" ")
-print(b)
+# a= 'I      studied     python'
+# b=a.split(" ")
+# print(b)
 
-a='I:studied:python'
-b=a.split(':')
-print(b)
+# a='I:studied:python'
+# b=a.split(':')
+# print(b)
 
 
 # 2차방정식 
 
-x=float(input('실수 x를 입력하시오 : '))
-y=2.5*x**2+3.3*x+6
-print(y)
-# pow 써라
-y=2.5*pow(x,2)+3.3*x+6
-print(y)
+# x=float(input('실수 x를 입력하시오 : '))
+# y=2.5*x**2+3.3*x+6
+# print(y)
+# # pow 써라
+# y=2.5*pow(x,2)+3.3*x+6
+# print(y)
+
+## 3개의 단어를 키포드로 입력받아 각 단어의 첫 글자를 추출 후 단어의 약자를 출력하라
+# 각 단어변수 word1 2 3
+# 입력과 출력 구분선 : 문자열 연산
+# 긱 변수의 첫단어만 추출하여 변수 (abbr) 저장
+
+word1=input('첫번째 단어 : ')
+word2=input('두번째 단어 : ')
+word3=input('세번째 단어 : ')
+
+abbr=word1[0].upper()+word2[0].upper()+word3[0].upper()
+print('====================')
+print('약자 : ',abbr)
+
