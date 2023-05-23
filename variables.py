@@ -112,4 +112,4 @@ day=a[8:]
 print(date)
 print(day)
 
-# 
+print(day)
