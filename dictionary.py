@@ -49,13 +49,13 @@
 ## 딕셔너리의 동작원리 
 
 # 딕셔너리에서 키를 이용한 key:value 추가 
-dic1={'이름':'조해민','나이':25,'성별':'남자','몸무게':69}
-print(dic1)
-dic1['신분']='학생'
-print(dic1)
-# 딕셔너리에서 키를 이용한 key:value 삭제
-del dic1['성별']
-print(dic1)
+# dic1={'이름':'조해민','나이':25,'성별':'남자','몸무게':69}
+# print(dic1)
+# dic1['신분']='학생'
+# print(dic1)
+# # 딕셔너리에서 키를 이용한 key:value 삭제
+# del dic1['성별']
+# print(dic1)
 
 # 딕셔너리에서 key목록만 뽑아낼떄
 # iterable한 형태로 data가 뽑아져 나오므로 for문 ㄱㄱ 
@@ -95,22 +95,23 @@ print(dic1)
 
 # ********************** 연습문제 *********************
 
-#lista= ['A','A','B','O','O','AB','AB']
+lista= ['A','A','B','O','O','AB','AB']
 
 # 딕셔너리로 변환해서 출력해보자
 # 예를들어 A:2,B:1
 
-#dict_sample={}
+# dict_sample={}
 
-#for i in lista :
+# for i in lista :
 #     #### 방법3
 #      if i not in dict_sample.keys():
 #          dict_sample[i]=lista.count(i)   
 #     #### 방법1
-#     if i in dict_sample.keys():        
+#     if i in dict_sample:        
 #         dict_sample[i]=dict_sample[i]+1
 #     else:
 #         dict_sample[i] = 1
+# print(dict_sample)
 #    #### 방법 2  
 #     if i not in dict_sample.keys() :  
 #         dict_sample[i]=1
@@ -166,3 +167,17 @@ completion=["stanko", "ana", "mislav"]
 #         else:
 #             answer = p
 #     return answer
+
+
+
+
+participant=["mislav", "stanko", "mislav", "ana"]
+completion=["stanko", "ana", "mislav"]
+
+#리스트로
+answer=''
+for i in participant :
+    if i in completion :
+        completion.remove(i)
+    else : 
+        answer=i
