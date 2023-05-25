@@ -61,7 +61,7 @@ lista =['A','A','A','B','B','AB','O']
 # in, not in들은 interable한 자료형이 나온다  
 # a in list , a not in lista, a not in dictionart.keys(), a not in set
 
-# 비어있는 값들은 거짓, 값이 들어있으면 참이다. 
+# 비어있는 값들은 거짓, 값이 들어있으면 참이다.dd 
 lista=[1,2,3]
 while lista :
     print('참입니다')
