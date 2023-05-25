@@ -63,11 +63,11 @@ print(dic1)
 # print(keyList)
 
 # 위의 keyList에서 각각의 값을 출력해보자
-keyList=dic1.keys()
+# keyList=dic1.keys()
 # print(keyList) ## --> dict_keys(['이름', '나이', '몸무게', '신분']) 리스트 형태 아님 !!!!!!!!!!
-for i in keyList :
+# for i in keyList :
     ## key 값을 출력해주는 for 문안에서 value도 같이 출력하도록 해보자 
-    print('key : ',i, ' , ','value : ',dic1[i])
+    # print('key : ',i, ' , ','value : ',dic1[i])
 # 위에 for 문을 활용해서 key가 담긴 list를 만들고 value가 담긴 list
 # list_key=[]
 # list_value=[]
@@ -86,9 +86,83 @@ for i in keyList :
 #     print(i)
 
 # 딕셔너리의 확장 update()
-dic1={'a':1,'b':2,'c':3}
-dic2={'a':2,'e':4,'f':5}
+# dic1={'a':1,'b':2,'c':3}
+# dic2={'a':2,'e':4,'f':5}
 
-dic1.update(dic2)
-print(dic1)
+# dic1.update(dic2)
+# print(dic1)
 
+
+# ********************** 연습문제 ********************
+
+#lista= ['A','A','B','O','O','AB','AB']
+
+# 딕셔너리로 변환해서 출력해보자
+# 예를들어 A:2,B:1
+
+#dict_sample={}
+
+#for i in lista :
+#     #### 방법3
+#      if i not in dict_sample.keys():
+#          dict_sample[i]=lista.count(i)   
+#     #### 방법1
+#     if i in dict_sample.keys():        
+#         dict_sample[i]=dict_sample[i]+1
+#     else:
+#         dict_sample[i] = 1
+#    #### 방법 2  
+#     if i not in dict_sample.keys() :  
+#         dict_sample[i]=1
+#     else :
+#         dict_sample[i]=dict_sample[1]+1
+    
+# print(dict_sample)
+
+# 완주하지 못한 선수 
+# 리스트 방법(1)
+    # for i in participant :
+    #     if i not in completion :
+    #         answer = i
+    #     elif participant.count(i) - completion.count(i)==1  :
+    #         answer = i
+
+participant=["mislav", "stanko", "mislav", "ana"]
+completion=["stanko", "ana", "mislav"]
+# 리스트 방법(2)
+# for i in participant :
+#     if i in completion : ## 효율성을 저해하는 놈 
+#         completion.remove(i)
+#     else : 
+#         print(i)
+
+
+# completion을 dict로 변환
+# dictc={}
+# for i in completion :
+#     if i not in dictc.keys():
+#         dictc[i]=1
+#     else :
+#         dictc[c]=dictc[c]+1
+# for i in participant :
+#     if i in dictc.keys() and dictc[i]>0 :
+#         dictc[i]=dictc[i]-1
+#     else :
+#         print(i)
+
+# participant를 for 문으로 1개씩 꺼내서 completion[i]=compile[i]-1
+
+# def solution(participant, completion):
+#     answer = ""
+#     dictc = {}
+#     for c in completion:
+#         if c not in dictc.keys():
+#             dictc[c] = 1
+#         else:
+#             dictc[c] = dictc[c] + 1    
+#     for p in participant:
+#         if p in dictc and dictc[p] > 0:
+#             dictc[p] = dictc[p] -1
+#         else:
+#             answer = p
+#     return answer
