@@ -73,7 +73,7 @@
 # 리스트.remove(값)
 # 중복되어있을 때 앞에 있는걸 먼저 지움 
 
-lista=[1,3,9,5,9,6,7,9,10]
+# lista=[1,3,9,5,9,6,7,9,10]
 # lista.remove(5)
 # print(lista)
 
@@ -177,20 +177,20 @@ lista=[1,3,9,5,9,6,7,9,10]
 # print(lastvalue)
 # print(lista)
 # 문자 리스트를 문자열로 만들기
-lista=['hello','world','python']
-st1=''
-st2=st1.join(lista)
-print(st2)
+# lista=['hello','world','python']
+# st1=''
+# st2=st1.join(lista)
+# print(st2)
 
-for i in lista :
-    st1=st1+i
-print(st1)
-# 문자열을 문자 리스트로 만들기 
-sta='hello world python'
-mysta1=list(sta)
-mysta2=sta.split()
-print(mysta1) # ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', ' ', 'p', 'y', 't', 'h', 'o', 'n']
-print(mysta2) #['hello', 'world', 'python']
+# for i in lista :
+#     st1=st1+i
+# print(st1)
+# # 문자열을 문자 리스트로 만들기 
+# sta='hello world python'
+# mysta1=list(sta)
+# mysta2=sta.split()
+# print(mysta1) # ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd', ' ', 'p', 'y', 't', 'h', 'o', 'n']
+# print(mysta2) #['hello', 'world', 'python']
 
 # 문자열뒤집기 문제 
 # 방법1
@@ -235,4 +235,27 @@ print(mysta2) #['hello', 'world', 'python']
 #         odd=num_list.count(num_list[i])+odd
 # answer.append(even)
 # answer.append(odd)
+
+# 방법(1) 최대값 구하기 
+# lista=[100,20,30,5,90]
+# maxA=lista[0]
+# minA=lista[0]
+# for i in lista :
+#     if i >maxA :
+#         maxA=i
+#     if i < minA :
+#         minA=i
+
+# print(maxA)
+# print(minA)
+# # 방법(2) 
+# maxA=max(lista)
+# minA=min(lista)
+# # 방법(3) 
+
+# lista.sort()
+# maxA=lista[-1]
+# minA=lista[0]
+# print(maxA)  
+# print(minA)
 
