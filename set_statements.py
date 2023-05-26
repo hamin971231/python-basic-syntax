@@ -66,3 +66,5 @@ lista=[1,2,3]
 while lista :
     print('참입니다')
     lista.pop()
+
+    
