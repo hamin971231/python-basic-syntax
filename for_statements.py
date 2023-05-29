@@ -124,23 +124,23 @@
 # 리스트를 만드는 방법중에 리스트 컴프리핸션이라는 방법이 있다. 
 # 리스트에 0~9까지 담는방법
 # 방법(1)
-lista=[0,1,2,3,4,5,6,7,8,9]
-# 방법(2)
-lista=list(range(0,10))
-# 방법(3)
-lista=[]
-for a in range(10):
-    lista.append(a)
-# 방법(4) 리스트 컴프리핸션
-# 장점 : 간결하다 
-lista=[ i**2 for i in range(0,10)]
-print(lista)
+# lista=[0,1,2,3,4,5,6,7,8,9]
+# # 방법(2)
+# lista=list(range(0,10))
+# # 방법(3)
+# lista=[]
+# for a in range(10):
+#     lista.append(a)
+# # 방법(4) 리스트 컴프리핸션
+# # 장점 : 간결하다 
+# lista=[ i*2 for i in range(0,10) if i%2==1]
+# print(lista)
 
 
-# 리스트 내포 
+# # 리스트 내포 
 
 
-arr=[5, 1, 4]
+# arr=[5, 1, 4]
 # for i in range(len(arr)) : 
 #     arr[i]*arr[i]
 
@@ -161,3 +161,146 @@ arr=[5, 1, 4]
 #         dict_con[i]=1
 # print(dict_con)
 
+
+
+# 한 반에 수학점수가 60점 넘으면 합, 미만이면 불
+# 학생의 번호 순서대로 있을 때 
+# listA=[90,25,67,45,80]
+# # 출력 예 ) 1번 학생은 합격 입니다. 
+# for i in range(len(listA)):
+#     if listA[i]> 60 :
+#         print(f'{i+1}번 학생은 합격입니다.')
+#     else :
+#         print(f'{i+1}번 학생은 불합격입니다.')
+# num=0
+# for i in listA :
+#     num+=1
+#     if i>60 :
+
+#         print(f'{num}은 합격')
+#     else :
+#         print(f'{num}은 불합격')
+
+
+# answer = ''
+# myString="abstract algebra"
+# for i in myString.inpdex() :
+#     if myString[i] == 'a' :
+#         myString[i]='A'
+
+# for문과 break문 : for문에서 break를 반드시 써야하는 상황
+# # 선착순 한명만 찾는 상황
+# listA=['b','b','ab','a','b','a']
+
+# 출력결과 : n번쨰 고객이 이벤트에 당첨되었습니다.
+# for i in range(len(listA)) :
+#     if listA[i]=='a':
+#         print(f'{i+1}번째 고객이 이벤트에 당첨되었습니다')
+#         break
+
+# for 문을 이용한 구구단 
+# 5단 출력 결과 구구단 
+# for j in range(1,11) :
+#     print(f'{nums} * {j} = {nums * j}')
+
+# while True :
+#     nums=int(input('구구단 몇단을 계산해드릴까요 : '  ))
+#     for i in range(1,10):
+#         print(f'{nums} * {i} = {nums * i}')
+
+
+# 5단~9단까지 출력
+
+# for i in range(5,10) :
+#     for j in range(1,10)  :
+#         print(f'{i} * {j} = {i * j}')
+
+# num=5
+# while num<10 :
+#     for i in range(1,10):
+#         print(f'{num} * {i} = {num * i}')
+#     num+=1
+
+# for 문으 이용한 정렬 알고리즘
+# lista=[10,20,30,40]
+# 리스트 0번쨰와 1번째 자리를 바꾸려면 
+# 리스트 0의 값이 바껴서 교체가 안됌
+# lista[0]=lista[1]
+# lista[1]=lista[0]
+
+# # 그래서 10이라는 숫자를 temp 에 킾해둠
+# temp=lista[0]
+# lista[0]=lista[1]
+# lista[1]=temp
+# print(lista)
+
+# 파이선에서 지원하고있는 문법
+# lista[0], lista[1]=lista[1],lista[0]
+# print(lista)
+
+
+# listA=[93,45,21,30,20,94,66,71,45]
+
+
+
+# print(listA)
+# 선택정렬 : 0번쨰 인덱스부터 가장 작은 값을 채워나가는방식
+# 첫번쨰 for 문은 채워나가야할 인덱스를 의미 
+# 두번쨰 for 문은 비교의 대상이 되는 인덱스를 의미 
+## 오름차순으로 정렬하기 
+# for i in range(len(listA)-1) : ## 마지막애는 비교대상이 없어서 있을필요없음. 
+#     for j in range(i+1,len(listA)):
+#         if listA[i]>listA[j] :
+#             listA[i],listA[j]=listA[j],listA[i]
+            # temp=listA[i]
+            # listA[i]=listA[j]
+            # listA[j]=temp
+
+
+
+# 버블정렬
+# 
+# for i in range(len(listA)) :
+#     # i가 0일때
+#     # j는 9번반복
+#     for j in range(len(listA)-1-i):
+#         if listA[j]>listA[j+1]:
+#             listA[j], listA[j+1] = listA[j+1], listA[j]
+
+# print(listA)
+# arr1=[[1,2],[2,3]]
+# arr2=[[3,4],[5,6]]	
+# answer = []
+# # for i in range(len(arr1[] :
+# #     for j in arr2:
+# #         answer[i][j] = arr1[i][i]+arr2[j][j]
+
+# for i in range(len(arr1)) :
+#     temp=[]
+#     for j in range(len(arr1[i])) : ## 각 요소들의 길이는 같기떄문에 0번쨰만알아도 댐
+#         temp.append(arr1[i][j]+arr2[i][j])
+#     answer.append(temp)
+
+
+
+# print(answer)
+# listA=[93,45,21,30,20,94,66,71,45]
+# for i in range(len(listA)) :
+#     for j in range(i+1,len(listA)-1) :
+#         if listA[j]>listA[j+1] :
+#             listA[i],listA[j]=listA[j],listA[i]
+# print(listA)
+
+## 버블정렬
+# for i in range(len(listA)) :
+#     for j in range(len(listA)-i-1) :
+#         if listA[j]>listA[j+1] :
+#             listA[j],listA[j+1]=listA[j+1],listA[j]
+# print(listA)
+
+
+
+# for i in range(len(listA)) :
+#     for j in range(len(listA)-i-1) :
+#         if listA[j]>listA[j+1] :
+#             listA[j],listA[j+1]=listA[j+1],listA[j]
