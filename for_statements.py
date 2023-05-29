@@ -132,7 +132,8 @@ lista=[]
 for a in range(10):
     lista.append(a)
 # 방법(4) 리스트 컴프리핸션
-lista=[ i for i in range(0,10)]
+# 장점 : 간결하다 
+lista=[ i**2 for i in range(0,10)]
 print(lista)
 
 
