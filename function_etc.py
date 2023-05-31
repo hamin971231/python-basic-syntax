@@ -78,41 +78,41 @@ print(lst_true)
 # [False, False, True, False, True] 결과임
 
 # 함수형 프로그래밍을 사용해서, 주어진 리스트에서 홀수만 추출
-list_formal=[4,7,1,2,5,6,8]
-list_odd=list(filter(lambda x: x if x%2==1 else False , list_formal))
-list_new=list(map(lambda x: x**2,list(filter(lambda x: x if x%2==1 else False , list_formal))))
-print(list_new)
+# list_formal=[4,7,1,2,5,6,8]
+# list_odd=list(filter(lambda x: x if x%2==1 else False , list_formal))
+# list_new=list(map(lambda x: x**2,list(filter(lambda x: x if x%2==1 else False , list_formal))))
+# print(list_new)
 
 # sum : 주어진 자료들의 총합
 print(sum([1,2,3]))
 # 예제
-list_odd=list(filter(lambda x: x if x%2==1 else False , list_formal))
-print(sum(list_odd))
+# list_odd=list(filter(lambda x: x if x%2==1 else False , list_formal))
+# print(sum(list_odd))
 
-# 문자를 아스키코드 변환 : ord()
-print(ord('a'))
-# 숫자 107이 의미하는 아스키코드상의 문자는?  : chr()
-print(chr(97))
+# # 문자를 아스키코드 변환 : ord()
+# print(ord('a'))
+# # 숫자 107이 의미하는 아스키코드상의 문자는?  : chr()
+# print(chr(97))
 
-# 문자열이 주어질떄 숫자를 제외하고 문자값만 새로운 문자열로 만들어보아라
-str1='123adsf23fd'
-print(ord('z')) # 소문자 a~z : 97-122
+# # 문자열이 주어질떄 숫자를 제외하고 문자값만 새로운 문자열로 만들어보아라
+# str1='123adsf23fd'
+# print(ord('z')) # 소문자 a~z : 97-122
 
-print(ord('Z')) # 소문자 A~z : 65-90
-new_str=''
-for i in str1 :
-    if (122 >= ord(i) >= 97) or (90 >= ord(i) >= 65) :
-        new_str +=i
-print(new_str)
+# print(ord('Z')) # 소문자 A~z : 65-90
+# new_str=''
+# for i in str1 :
+#     if (122 >= ord(i) >= 97) or (90 >= ord(i) >= 65) :
+#         new_str +=i
+# print(new_str)
 
 # 절대값 구하기 : abs()
 
 print(abs(-3))
 
 # 주어진 리스트를 map을 사용해서 절대값으로 변환한 리스트를 출력해보자
-list_minus=[-1,-5,12,-5]
-list_ans=list(map(lambda x: abs(x), list_minus))
-print(list_ans)
+# list_minus=[-1,-5,12,-5]
+# list_ans=list(map(lambda x: abs(x), list_minus))
+# print(list_ans)
 
 
 # 재귀함수
@@ -150,18 +150,50 @@ print(list_ans)
 # [[10,20],[10,30][10,40]......]
 # listA의 2개의 조합을 구하셈 
 listA=[10,20,30,40,50]
-listB=[]
-count=0
-for i in range(len(listA)):
-    for j in range(i+1,len(listA)): 
-        count+=1
-        listB.append([listA[i],listA[j]])
-print(count)
+# listB=[]
+# count=0
 
-def combi(lista) :
-    listb=[]
-    if 
+#         for j in range(i+1,len(listA)): 
+#             count+=1
+#             listB.append([listA[i],listA[j]])
+# print(count)
+## 중단시키는 조건이 필요함 
+# def recur(n_list,total_list,temp_list,n_input,m_input) :
+#     if m_input==0 :    
+#         total_list.append(temp_list[:])
+#         return 
+#     for i in range(n_input,len(n_list)):
+#         temp_list.append(n_list[i])
+#         recur(n_list,total_list,temp_list,i+1,m_input-1)
+#         temp_list.pop()
+
+
+# listA=[10,20,30,40,50]
+# total_list=[]
+# temp_list=[]
+
+# m_input=2
+# recur(listA,total_list,temp_list,0,m_input)
+# print(total_list)
+# print(temp_list)
+
+# 순열이면 n이 없으면 됌
+
+         
+# def combi(lista) :
+#     listb=[]
+#     if 
+# n=15
+# real=[]
+# for i in range(1,n+1) :
+#     list_num=[]
+#     for j in range(1,n) :
+#         if i%j==0 :
+#             list_num.append(j) 
+#     if len(list_num)>=3 :
+#         real.append(i)
+# print(real)
 
 
 
-
+# 파일생성
