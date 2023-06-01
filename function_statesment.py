@@ -241,3 +241,16 @@ lista=[1,4,6,9]
 #     i=int(i)
 #     answer.append(i)
 # answer.reverse()
+
+
+arr=[5,9,7,10]
+divisor=5
+answer = []
+for i in arr :
+    if (i%divisor) == 0 :
+        answer.append(i)
+
+    else :
+        answer=[-1]
+answer.sort()
+print(answer)

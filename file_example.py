@@ -70,24 +70,53 @@ import os
 
 # 그 다음 폴더까지 검색 
 
-searchDir=r'C:\Users\hamin\조해민'
+# searchDir=r'C:\Users\hamin\조해민'
 
-dirList = os.listdir(searchDir) # ['python-basic-syntax']
-
-for dir in dirList:
-    filename = os.path.join(searchDir, dir) #C:\Users\hamin\조해민\python-basic-syntax
-    if os.path.isdir(filename):
-        dirList2=os.listdir(filename)
-        for dir2 in dirList2: ## dir2은  C:\Users\hamin\조해민\python-basic-syntax 안에 있는 파일들임
-            dirTuple2 = os.path.splitext(dir2)
-            if(dirTuple2[1]=='.py'):
-                fullPath = os.path.join(filename, dir2)
-                print(fullPath) # ex)  C:\Users\hamin\조해민\python-basic-syntax\variables.py 
-    dirTuple = os.path.splitext(dir) #('python-basic-syntax', '')
-    if(dirTuple[1]=='.py'):
-        fullPath = os.path.join(searchDir, dir)
-        print(fullPath)
+# dirList = os.listdir(searchDir) # ['python-basic-syntax']
+# print(dirList)
+# for dir in dirList:
+#     filename = os.path.join(searchDir, dir) #C:\Users\hamin\조해민\python-basic-syntax
+#     if os.path.isdir(filename): # 목록이면 파일명 하나로 들어가는 것 . 
+#         dirList2=os.listdir(filename)
+#         for dir2 in dirList2: ## dir2은  C:\Users\hamin\조해민\python-basic-syntax 안에 있는 파일들임
+#             dirTuple2 = os.path.splitext(dir2)
+#             if(dirTuple2[1]=='.py'):
+#                 fullPath = os.path.join(filename, dir2)
+#                 print(fullPath) # ex)  C:\Users\hamin\조해민\python-basic-syntax\variables.py 
+#     dirTuple = os.path.splitext(dir) #('python-basic-syntax', '')
+#     if(dirTuple[1]=='.py'): #  ['python-basic-syntax'] 에서 파이선 파일을 뽑아내는것 
+#         fullPath = os.path.join(searchDir, dir)
+#         print(fullPath)
 
 
 
 # 모든 폴더까지 검색
+
+
+# searchDir =r'C:\Users\hamin\조해민'
+
+# def searchRecul(searchDir) :
+#     try :
+#         dirList = os.listdir(searchDir) # ['python-basic-syntax']
+#         if not dirList :
+#             return
+#         for dir in dirList:
+#             filename = os.path.join(searchDir, dir) #C:\Users\hamin\조해민\python-basic-syntax
+#             if os.path.isdir(filename): # 목록이면 파일명 하나로 들어가는 것 . 
+#                 searchRecul(filename) 
+#             dirTuple = os.path.splitext(dir) #('python-basic-syntax', '')
+#             if(dirTuple[1]=='.py'): #  ['python-basic-syntax'] 에서 파이선 파일을 뽑아내는것 
+#                 fullPath = os.path.join(searchDir, dir)
+#                 print(fullPath)
+#     except Exception :
+#         print('예외입니다.')
+
+# searchRecul(searchDir)
+
+    
+
+
+
+
+
+
