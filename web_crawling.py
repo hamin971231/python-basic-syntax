@@ -31,19 +31,18 @@
 
 # 코인시세정보 api url
 # BTCUSDT
-# import json
-# url = "https://api.binance.com/api/v3/ticker/24hr"
+import json
+url = "https://api.binance.com/api/v3/ticker/24hr"
+response = requests.get(url)
+data_json = json.loads(response.text)
 
-# response = requests.get(url)
-# data_json = json.loads(response.text)
-# print(data_json)
 # 키는 symbol : 'BTCUSDT', 'lastPrice' : 
 # 출력 결과가 print(f'{} price는 {lastPrice}')
 
-# for i in data_json :
-#     if i['symbol']=='BTCUSDT' :
-#          print(f"{i['symbol']} 코인의 가격은 {i['lastPrice']} 입니다.")ㅂ
-
+for i in data_json :
+    if i['symbol']=='BTCUSDT' :
+        #  print(f"{i['symbol']} 코인의 가격은 {i['lastPrice']} 입니다.")ㅂ
+        # 값을 변수에 담아서 db에 저장해야함
 # csv파일 parsing
 # import seaborn
 # from matplotlib import pyplot
@@ -67,9 +66,5 @@
 # pyplot.xlabel('gender')
 # pyplot.ylabel('average tip')
 # pyplot.show()
-seoul=["Jane", "Kim"]
-answer=''
-for i in range(len(seoul)) :
-    if seoul[i]=='Kim' :
-        print(seoul[i],i)
-        
+#
+
